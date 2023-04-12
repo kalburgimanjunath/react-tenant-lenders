@@ -2,14 +2,15 @@ import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import App from './App';
-import { BrowswerRouter as Router } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import store from './store';
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
     <Router>
-      <App />
+      <App store={store} />
     </Router>
   </StrictMode>
 );
